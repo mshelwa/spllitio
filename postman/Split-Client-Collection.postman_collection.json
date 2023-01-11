@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "479f0c9d-8a34-4362-b263-c7bdc01dcee5",
+		"name": "Split-Client [Feature-Flags-Magement]",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Split Reader",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/split-client/merchant/1234d/features/{{split-name}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"split-client",
+						"merchant",
+						"1234d",
+						"features",
+						"{{split-name}}"
+					],
+					"query": [
+						{
+							"key": "userAttribute",
+							"value": "ready",
+							"disabled": true
+						},
+						{
+							"key": "userAttribute",
+							"value": "on",
+							"disabled": true
+						},
+						{
+							"key": "userAttribute",
+							"value": "enabled",
+							"disabled": true
+						},
+						{
+							"key": "userAttribute",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "userAttribute",
+							"value": "dummy",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "split-name",
+			"value": "featureflag-feature1-enabled"
+		}
+	]
+}
